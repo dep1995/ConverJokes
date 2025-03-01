@@ -251,6 +251,32 @@
             transform: scale(1.05);
         }
     </style>
+    <div id="popup" class="popup">Copied to clipboard!</div>
+    
+    <style>
+    .popup {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 4px;
+      display: none;
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    
+    @keyframes fadein {
+      from {bottom: 0; opacity: 0;}
+      to {bottom: 20px; opacity: 1;}
+    }
+    
+    @keyframes fadeout {
+      from {bottom: 20px; opacity: 1;}
+      to {bottom: 0; opacity: 0;}
+    }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -20960,9 +20986,11 @@
             const jokeText = jokes[currentCategory][currentJoke].dialogue
                 .map(line => `${line.speaker}: ${line.line}`)
                 .join('\n');
-            navigator.clipboard.writeText(jokeText)
-                .then(() => alert('Joke copied! 😄'))
-                .catch(err => console.error('Copy failed:', err));
+            navigator.clipboard.writeText(jokeText);
+              popup.style.display = 'block';
+  setTimeout(() => {
+    popup.style.display = 'none';
+  }, 3000);
                 window.location.href = "https://www.effectiveratecpm.com/iyj002xdgt?key=d5e6254a1def9a4eee4d1571083e33b7";
                // window.open("https://www.effectiveratecpm.com/yn65ds22tj?key=cf443fadb3a0187f3d8a5a5007eca3f7", "_blank");
         }
