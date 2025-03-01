@@ -43,9 +43,6 @@
             font-size: 3rem;
             margin-bottom: 20px;
             color: #fa7806; 
-           /* linear-gradient(135deg, #ff6f61, #ffcc00);
-           -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;*/
             animation: bounce 2s infinite;
         }
 
@@ -133,6 +130,13 @@
 
         /* Controls */
         .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        /* adsC1  */
+        .adsC1 {
             display: flex;
             justify-content: center;
             gap: 10px;
@@ -254,7 +258,17 @@
         <div id="mainScreen">
             <h1><span aria-label="Comedy">🎭</span> Jokes Categories <span aria-label="Laughing">🤣</span></h1>
             <!--<h1>&#x1F3AD; Comedy Categories &#x1F3Af;</h1>-->
-            
+            <div class ="adsC1"><script type="text/javascript">
+              atOptions = {
+                'key' : '606681157f5f736684cbca8cbdab27e3',
+                'format' : 'iframe',
+                'height' : 30,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/606681157f5f736684cbca8cbdab27e3/invoke.js"></script>
+          </div>
             <div class="category-grid" id="categoryGrid">
                 <div class="category-card" onclick="showJokes('Workplace')">
                     <i class="fas fa-briefcase"></i>
@@ -280,6 +294,7 @@
                     <i class="fas fa-utensils"></i>
                     <h2>Food Jokes</h2>
                 </div>
+                
                 <div class="category-card" onclick="showJokes('Animals')">
                     <i class="fas fa-paw"></i>
                     <h2>Animals Jokes</h2>
@@ -320,6 +335,7 @@
                     <i class="fas fa-paw"></i>
                     <h2>Animal Puns</h2>
                 </div>
+                
                 <div class="category-card" onclick="showJokes('Silly_Questions')">
                     <i class="fas fa-question-circle"></i>
                     <h2>Silly Questions</h2>
@@ -341,14 +357,37 @@
                     <h2>Weather Jokes</h2>
                 </div>
             </div>
+            <div class ="adsC1">
+              <script type="text/javascript">
+                atOptions = {
+                  'key' : '63fddcbb11b443b1e402ca348b41fdea',
+                  'format' : 'iframe',
+                  'height' : 50,
+                  'width' : 320,
+                  'params' : {}
+                };
+              </script>
+              <script type="text/javascript" src="//www.highperformanceformat.com/63fddcbb11b443b1e402ca348b41fdea/invoke.js"></script>
+               </div>
         </div>
-
         <!-- Joke Screen -->
         <div class="joke-screen" id="jokeScreen">
             <button class="back-btn" onclick="showMainScreen()">← Back</button>
-            <h1 id="jokeCategoryTitle">😁 Workplace Jokes 🤣</h1>
+            <h1 id="jokeCategoryTitle">😁 Workplace Jokes 🤣  </h1> 
+            <div class ="adsC1"><script type="text/javascript">
+              atOptions = {
+                'key' : '606681157f5f736684cbca8cbdab27e3',
+                'format' : 'iframe',
+                'height' : 30,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/606681157f5f736684cbca8cbdab27e3/invoke.js"></script>
+          </div>
             <div class="joke-box" id="jokeBox">
                 <!-- Dialogue will be inserted here -->
+              
             </div>
             <div class="controls">
                 <button onclick="previousJoke()">← Previous</button>
@@ -358,9 +397,17 @@
                 <button onclick="nextJoke()">Next →</button>
             </div>
             <div class="counter" id="counter">Joke 1 of 5</div>
+          
+<div id="container-c20f71b77c7586f86db760a74ddf7e22"></div>  
+<!--  ads -->
+<div class ="adsC1">
+  <script async="async" data-cfasync="false" src="//pl25995624.effectiveratecpm.com/ed38a646c85423bc9396ecf824c5f699/invoke.js"></script>
+  <div id="container-ed38a646c85423bc9396ecf824c5f699"></div>
+   </div> 
+   
         </div>
-    </div>
-
+    </div> 
+ 
     <!-- Dark Mode Toggle -->
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
 
@@ -20877,9 +20924,10 @@
             document.getElementById('mainScreen').style.display = 'none';
             document.getElementById('jokeScreen').style.display = 'block';
             document.getElementById('jokeCategoryTitle').textContent = `😂 ${category.charAt(0).toUpperCase() + category.slice(1)} Jokes 😂`;
+            
             updateDisplay();
         }
-
+    
         function showMainScreen() {
             document.getElementById('mainScreen').style.display = 'block';
             document.getElementById('jokeScreen').style.display = 'none';
@@ -20915,6 +20963,8 @@
             navigator.clipboard.writeText(jokeText)
                 .then(() => alert('Joke copied! 😄'))
                 .catch(err => console.error('Copy failed:', err));
+                window.location.href = "https://www.effectiveratecpm.com/iyj002xdgt?key=d5e6254a1def9a4eee4d1571083e33b7";
+               // window.open("https://www.effectiveratecpm.com/yn65ds22tj?key=cf443fadb3a0187f3d8a5a5007eca3f7", "_blank");
         }
 
         // Dark Mode Toggle
@@ -20925,5 +20975,6 @@
         // Initialize
         showMainScreen();
     </script>
+     <script type='text/javascript' src='//pl25995716.effectiveratecpm.com/ff/4d/1d/ff4d1dca6ad678f542b4771ec565f895.js'></script>
 </body>
 </html>
