@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comedy Categories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-right: -40px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        /* Category Grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .category-card {
+            background: #2d2d2d;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card i {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .category-card h2 {
+            font-size: 0.9rem;
+            color: #fff;
+            margin: 0;
+        }
+        .adsC1 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 10px;
+            
+            
+                   }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span aria-label="Comedy">🤣</span> Jokes Categories <span aria-label="Laughing">🤪</span></h1>
+        <div class ="adsC1"><script type="text/javascript">
+            atOptions = {
+              'key' : '606681157f5f736684cbca8cbdab27e3',
+              'format' : 'iframe',
+              'height' : 30,
+              'width' : 348,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/606681157f5f736684cbca8cbdab27e3/invoke.js"></script>
+        </div>
+        <div class="category-grid" id="categoryGrid">
+            <div class="category-card" onclick="navigateToJokes('Workplace')">
+                <i class="fas fa-briefcase"></i>
+                <h2>Workplace Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Family')">
+                <i class="fas fa-home"></i>
+                <h2>Family Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('School')">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>School Jokes</h2>
+            </div>
+        <div class="category-card" onclick="navigateToJokes('Tech')">
+            <i class="fas fa-laptop"></i>
+            <h2>Tech Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Riddles')">
+            <i class="fas fa-question"></i>
+            <h2>Riddles</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Food')">
+            <i class="fas fa-utensils"></i>
+            <h2>Food Jokes</h2>
+        </div>
+        
+        <div class="category-card" onclick="navigateToJokes('Animals')">
+            <i class="fas fa-paw"></i>
+            <h2>Animals Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Sports')">
+            <i class="fas fa-futbol"></i>
+            <h2>Sports Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Travel')">
+            <i class="fas fa-plane"></i>
+            <h2>Travel Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Puns')">
+            <i class="fas fa-smile"></i>
+            <h2>Puns</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Holiday')">
+            <i class="fas fa-gift"></i>
+            <h2>Holiday Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Knock Knock')">
+            <i class="fas fa-door-open"></i>
+            <h2>Knock-Knock Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('One Liners')">
+            <i class="fas fa-comment"></i>
+            <h2>One-Liners</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Dad')">
+            <i class="fas fa-user"></i>
+            <h2>Dad Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Pop Culture')">
+            <i class="fas fa-film"></i>
+            <h2>Pop Culture Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Animal Puns')">
+            <i class="fas fa-paw"></i>
+            <h2>Animal Puns</h2>
+        </div>
+        
+        <div class="category-card" onclick="navigateToJokes('Silly Questions')">
+            <i class="fas fa-question-circle"></i>
+            <h2>Silly Questions</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Science')">
+            <i class="fas fa-flask"></i>
+            <h2>Science Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Medical')">
+            <i class="fas fa-stethoscope"></i>
+            <h2>Medical Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Geographical')">
+            <i class="fas fa-globe"></i>
+            <h2>Geographical Jokes</h2>
+        </div>
+        <div class="category-card" onclick="navigateToJokes('Weather')">
+            <i class="fas fa-cloud-sun"></i>
+            <h2>Weather Jokes</h2>
+        </div>
+        
+        </div>
+        <div class ="adsC1">
+            <script type="text/javascript">
+              atOptions = {
+                'key' : '63fddcbb11b443b1e402ca348b41fdea',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+              };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/63fddcbb11b443b1e402ca348b41fdea/invoke.js"></script>
+             </div>
+    </div>
+
+    <script>
+        function navigateToJokes(category) {
+            window.location.href = `jokes.html?category=${encodeURIComponent(category)}`;
+        }
+    </script>
+</body>
+</html> 
