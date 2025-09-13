@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comedy Categories</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src='//libtl.com/sdk.js' data-zone='3038479' data-sdk='show_3038479'></script>
+    <script src="https://cdn.jsdelivr.net/npm/moneta-gs@latest/dist/moneta.min.js"></script>
     <style>
         /* General Styles */
         body {
@@ -26,7 +28,6 @@
             background: #1e1e1e;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-right: -40px;
         }
 
         h1 {
@@ -41,6 +42,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 10px;
+            margin: 15px 0;
         }
 
         .category-card {
@@ -69,31 +71,86 @@
             color: #fff;
             margin: 0;
         }
+        
         .adsC1 {
             text-align: center;
             display: flex;
             justify-content: center;
             align-content: center;
             gap: 10px;
-            
-            
-                   }
+        }
+        
+        /* Moneta.gs Ad Containers */
+        .moneta-ad {
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #2d2d2d;
+            padding: 10px;
+        }
+        
+        .moneta-ad-title {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-bottom: 5px;
+        }
+        
+        .moneta-banner {
+            width: 100%;
+            min-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .moneta-rectangle {
+            width: 100%;
+            min-height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .moneta-sticky {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            background: #2d2d2d;
+            padding: 10px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .ad-spacer {
+            height: 70px; /* Space for sticky ad */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1><span aria-label="Comedy">🤣</span> Jokes Categories <span aria-label="Laughing">🤪</span></h1>
-        <div class ="adsC1"><script type="text/javascript">
-            atOptions = {
-              'key' : '606681157f5f736684cbca8cbdab27e3',
-              'format' : 'iframe',
-              'height' : 30,
-              'width' : 348,
-              'params' : {}
-            };
-          </script>
-          <script type="text/javascript" src="//www.highperformanceformat.com/606681157f5f736684cbca8cbdab27e3/invoke.js"></script>
+        
+        <!-- Top Banner Ad -->
+        <div class="moneta-ad">
+            <div class="moneta-ad-title">Advertisement</div>
+            <div class="moneta-banner" id="moneta-banner-top"></div>
         </div>
+        
+        <div class ="adsC1">
+            <script type="text/javascript">
+                atOptions = {
+                  'key' : '606681157f5f736684cbca8cbdab27e3',
+                  'format' : 'iframe',
+                  'height' : 30,
+                  'width' : 348,
+                  'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/606681157f5f736684cbca8cbdab27e3/invoke.js"></script>
+        </div>
+        
         <div class="category-grid" id="categoryGrid">
             <div class="category-card" onclick="navigateToJokes('Workplace')">
                 <i class="fas fa-briefcase"></i>
@@ -107,82 +164,94 @@
                 <i class="fas fa-graduation-cap"></i>
                 <h2>School Jokes</h2>
             </div>
-        <div class="category-card" onclick="navigateToJokes('Tech')">
-            <i class="fas fa-laptop"></i>
-            <h2>Tech Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Riddles')">
-            <i class="fas fa-question"></i>
-            <h2>Riddles</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Food')">
-            <i class="fas fa-utensils"></i>
-            <h2>Food Jokes</h2>
+            
+            <!-- Mid-Page Rectangle Ad 
+            <div class="moneta-ad">
+                <div class="moneta-ad-title">Advertisement</div>
+                <div class="moneta-rectangle" id="moneta-rectangle-mid"></div>
+            </div>
+            -->
+            <div class="category-card" onclick="navigateToJokes('Tech')">
+                <i class="fas fa-laptop"></i>
+                <h2>Tech Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Riddles')">
+                <i class="fas fa-question"></i>
+                <h2>Riddles</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Food')">
+                <i class="fas fa-utensils"></i>
+                <h2>Food Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Animals')">
+                <i class="fas fa-paw"></i>
+                <h2>Animals Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Sports')">
+                <i class="fas fa-futbol"></i>
+                <h2>Sports Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Travel')">
+                <i class="fas fa-plane"></i>
+                <h2>Travel Jokes</h2>
+            </div>
+            
+            <!-- Another Rectangle Ad 
+            <div class="moneta-ad">
+                <div class="moneta-ad-title">Advertisement</div>
+                <div class="moneta-rectangle" id="moneta-rectangle-bottom"></div>
+            </div>
+            -->
+            <div class="category-card" onclick="navigateToJokes('Puns')">
+                <i class="fas fa-smile"></i>
+                <h2>Puns</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Holiday')">
+                <i class="fas fa-gift"></i>
+                <h2>Holiday Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Knock Knock')">
+                <i class="fas fa-door-open"></i>
+                <h2>Knock-Knock Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('One Liners')">
+                <i class="fas fa-comment"></i>
+                <h2>One-Liners</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Dad')">
+                <i class="fas fa-user"></i>
+                <h2>Dad Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Pop Culture')">
+                <i class="fas fa-film"></i>
+                <h2>Pop Culture Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Animal Puns')">
+                <i class="fas fa-paw"></i>
+                <h2>Animal Puns</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Silly Questions')">
+                <i class="fas fa-question-circle"></i>
+                <h2>Silly Questions</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Science')">
+                <i class="fas fa-flask"></i>
+                <h2>Science Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Medical')">
+                <i class="fas fa-stethoscope"></i>
+                <h2>Medical Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Geographical')">
+                <i class="fas fa-globe"></i>
+                <h2>Geographical Jokes</h2>
+            </div>
+            <div class="category-card" onclick="navigateToJokes('Weather')">
+                <i class="fas fa-cloud-sun"></i>
+                <h2>Weather Jokes</h2>
+            </div>
         </div>
         
-        <div class="category-card" onclick="navigateToJokes('Animals')">
-            <i class="fas fa-paw"></i>
-            <h2>Animals Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Sports')">
-            <i class="fas fa-futbol"></i>
-            <h2>Sports Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Travel')">
-            <i class="fas fa-plane"></i>
-            <h2>Travel Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Puns')">
-            <i class="fas fa-smile"></i>
-            <h2>Puns</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Holiday')">
-            <i class="fas fa-gift"></i>
-            <h2>Holiday Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Knock Knock')">
-            <i class="fas fa-door-open"></i>
-            <h2>Knock-Knock Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('One Liners')">
-            <i class="fas fa-comment"></i>
-            <h2>One-Liners</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Dad')">
-            <i class="fas fa-user"></i>
-            <h2>Dad Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Pop Culture')">
-            <i class="fas fa-film"></i>
-            <h2>Pop Culture Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Animal Puns')">
-            <i class="fas fa-paw"></i>
-            <h2>Animal Puns</h2>
-        </div>
-        
-        <div class="category-card" onclick="navigateToJokes('Silly Questions')">
-            <i class="fas fa-question-circle"></i>
-            <h2>Silly Questions</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Science')">
-            <i class="fas fa-flask"></i>
-            <h2>Science Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Medical')">
-            <i class="fas fa-stethoscope"></i>
-            <h2>Medical Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Geographical')">
-            <i class="fas fa-globe"></i>
-            <h2>Geographical Jokes</h2>
-        </div>
-        <div class="category-card" onclick="navigateToJokes('Weather')">
-            <i class="fas fa-cloud-sun"></i>
-            <h2>Weather Jokes</h2>
-        </div>
-        
-        </div>
         <div class ="adsC1">
             <script type="text/javascript">
               atOptions = {
@@ -194,13 +263,86 @@
               };
             </script>
             <script type="text/javascript" src="//www.highperformanceformat.com/63fddcbb11b443b1e402ca348b41fdea/invoke.js"></script>
-             </div>
+        </div>
+        
+        <!-- Bottom Banner Ad -->
+        <div class="moneta-ad">
+            <div class="moneta-ad-title">Advertisement</div>
+            <div class="moneta-banner" id="moneta-banner-bottom"></div>
+        </div>
+        
+        <div class="ad-spacer"></div>
     </div>
-
+    
+    <!-- Sticky Bottom Ad
+    <div class="moneta-sticky" id="moneta-sticky">
+        <div class="moneta-banner" id="moneta-sticky-banner"></div>
+    </div>
+-->
     <script>
         function navigateToJokes(category) {
-            window.location.href = `jokes.html?category=${encodeURIComponent(category)}`;
+            // Show rewarded ad before navigation
+            show_3038479().then(() => {
+                // User watched the ad, now navigate
+                window.location.href = `jokes.html?category=${encodeURIComponent(category)}`;
+            }).catch(() => {
+                // Ad failed or was skipped, navigate anyway
+                window.location.href = `jokes.html?category=${encodeURIComponent(category)}`;
+            });
         }
+        
+        // Initialize Moneta.gs ads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize banner ads
+            if (typeof moneta !== 'undefined') {
+                // Top banner ad
+                moneta.display('moneta-banner-top', {
+                    format: 'banner',
+                    width: 320,
+                    height: 50
+                });
+                /*
+                // Mid-page rectangle ad
+                moneta.display('moneta-rectangle-mid', {
+                    format: 'rectangle',
+                    width: 300,
+                    height: 250
+                });
+                
+                // Bottom rectangle ad
+                moneta.display('moneta-rectangle-bottom', {
+                    format: 'rectangle',
+                    width: 300,
+                    height: 250
+                });*/
+                
+                // Bottom banner ad
+                moneta.display('moneta-banner-bottom', {
+                    format: 'banner',
+                    width: 320,
+                    height: 50
+                });
+                /*
+                // Sticky banner ad
+                moneta.display('moneta-sticky-banner', {
+                    format: 'banner',
+                    width: 320,
+                    height: 50
+                });*/
+            }
+            
+            // Set up interstitial ads
+            show_3038479({
+                type: 'inApp',
+                inAppSettings: {
+                    frequency: 2,
+                    capping: 0.1,
+                    interval: 30,
+                    timeout: 5,
+                    everyPage: true
+                }
+            });
+        });
     </script>
 </body>
-</html> 
+</html>
