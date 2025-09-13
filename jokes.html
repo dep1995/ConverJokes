@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jokes Screen</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src='//libtl.com/sdk.js' data-zone='3038479' data-sdk='show_3038479'></script>
     <style>
         /* General Styles */
         body {
@@ -136,6 +137,11 @@
         <div class="joke-screen" id="jokeScreen">
            <!-- <button class="back-btn" onclick="goBack()">← Back</button> -->
             <h1 id="jokeCategoryTitle">😁 Jokes 🤣</h1>
+            <!-- Top Banner Ad -->
+        <div class="moneta-ad">
+            <div class="moneta-ad-title">Advertisement</div>
+            <div class="moneta-banner" id="moneta-banner-top"></div>
+        </div>
        <!--     <div class ="adsC1"><script type="text/javascript">
                 atOptions = {
                   'key' : '606681157f5f736684cbca8cbdab27e3',
@@ -158,7 +164,14 @@
                 <button class="random-btn" onclick="randomJoke()">ㅤ🎲 Random</button>
                 <button class="copy-btn" onclick="copyJoke()">ㅤ📋 Copyㅤ</button>
             </div>
+
             <div class="counter" id="counter">Joke 1 of 5</div>
+                  <!-- Bottom Banner Ad -->
+        <div class="moneta-ad">
+            <div class="moneta-ad-title">Advertisement</div>
+            <div class="moneta-banner" id="moneta-banner-bottom"></div>
+        </div>
+
                <!--         <div class ="adsC1">
                 <script async="async" data-cfasync="false" src="//pl25995624.effectiveratecpm.com/ed38a646c85423bc9396ecf824c5f699/invoke.js"></script>
                 <div id="container-ed38a646c85423bc9396ecf824c5f699"></div>-->
@@ -20723,11 +20736,75 @@
                 .join('\n');
             navigator.clipboard.writeText(jokeText);
             popup.style.display = 'block';
+
+           // Show rewarded ad before navigation
+            show_3038479().then(() => {
+                // User watched the ad, now navigate
+                window.location.href = `jokes.html?category=${encodeURIComponent(category)}`;
+            }).catch(() => {
+                // Ad failed or was skipped, navigate anyway
+                window.location.href = `jokes.html?category=${encodeURIComponent(category)}`;
+            });
+
   setTimeout(() => {
     popup.style.display = 'none';
   }, 3000);
-  window.location.href = "https://www.effectiveratecpm.com/iyj002xdgt?key=d5e6254a1def9a4eee4d1571083e33b7";
+  //window.location.href = "https://www.effectiveratecpm.com/iyj002xdgt?key=d5e6254a1def9a4eee4d1571083e33b7";
         }
+
+
+        // Initialize Moneta.gs ads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize banner ads
+            if (typeof moneta !== 'undefined') {
+                // Top banner ad
+                moneta.display('moneta-banner-top', {
+                    format: 'banner',
+                    width: 320,
+                    height: 50
+                });
+                /*
+                // Mid-page rectangle ad
+                moneta.display('moneta-rectangle-mid', {
+                    format: 'rectangle',
+                    width: 300,
+                    height: 250
+                });
+                
+                // Bottom rectangle ad
+                moneta.display('moneta-rectangle-bottom', {
+                    format: 'rectangle',
+                    width: 300,
+                    height: 250
+                });*/
+                
+                // Bottom banner ad
+                moneta.display('moneta-banner-bottom', {
+                    format: 'banner',
+                    width: 320,
+                    height: 50
+                });
+                /*
+                // Sticky banner ad
+                moneta.display('moneta-sticky-banner', {
+                    format: 'banner',
+                    width: 320,
+                    height: 50
+                });*/
+            }
+            
+            // Set up interstitial ads
+            show_3038479({
+                type: 'inApp',
+                inAppSettings: {
+                    frequency: 2,
+                    capping: 0.1,
+                    interval: 30,
+                    timeout: 5,
+                    everyPage: true
+                }
+            });
+        });
 
         // Initialize the jokes screen
         initializeJokesScreen();
