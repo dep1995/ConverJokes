@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comedy Categories</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src='//libtl.com/sdk.js' data-zone='3038479' data-sdk='show_3038479'></script>
+    <script src='//libtl.com/sdk.js' data-zone='3039596' data-sdk='show_3039596'></script>
     <script src="https://cdn.jsdelivr.net/npm/moneta-gs@latest/dist/moneta.min.js"></script>
     <style>
         /* General Styles */
@@ -282,7 +282,7 @@
     <script>
         function navigateToJokes(category) {
             // Show rewarded ad before navigation
-            show_3038479().then(() => {
+            show_3039596().then(() => {
                 // User watched the ad, now navigate
                 window.location.href = `jokes.html?category=${encodeURIComponent(category)}`;
             }).catch(() => {
@@ -332,7 +332,7 @@
             }
             
             // Set up interstitial ads
-            show_3038479({
+            show_3039596({
                 type: 'inApp',
                 inAppSettings: {
                     frequency: 2,
@@ -346,3 +346,4 @@
     </script>
 </body>
 </html>
+
