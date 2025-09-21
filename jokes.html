@@ -133,10 +133,10 @@
     </style>
 </head>
 <body>
-    <div class="container">
+   <div class="container">
         <div class="joke-screen" id="jokeScreen">
            <!-- <button class="back-btn" onclick="goBack()">← Back</button> -->
-            <h1 id="jokeCategoryTitle">😁 Jokes 🤣</h1>
+            <h1 id="jokeCategoryTitle" onclick="monetaDirect_Link_Ad()">😁 Jokes 🤣</h1>
             <!-- Top Banner Ad -->
         <div class="moneta-ad">
             <div class="moneta-ad-title">Advertisement</div>
@@ -165,7 +165,8 @@
                 <button class="copy-btn" onclick="copyJoke()">ㅤ📋 Copyㅤ</button>
             </div>
 
-            <div class="counter" id="counter">Joke 1 of 5</div>
+            
+            <div class="counter" id="counter" onclick="Adsterra_Link_Ad()">Joke 1 of 5</div>
                   <!-- Bottom Banner Ad -->
         <div class="moneta-ad">
             <div class="moneta-ad-title">Advertisement</div>
@@ -20730,6 +20731,7 @@
             updateDisplay();
         }
 
+       
         function copyJoke() {
             const jokeText = jokes[currentCategory][currentJoke].dialogue
                 .map(line => `${line.speaker}: ${line.line}`)
@@ -20738,7 +20740,7 @@
             popup.style.display = 'block';
 
            // Show rewarded ad before navigation
-            show_3039596().then(() => {
+            show_3038479().then(() => {
                 // User watched the ad, now navigate
                 window.location.href = `jokes.html?category=${encodeURIComponent(category)}`;
             }).catch(() => {
@@ -20753,6 +20755,13 @@
         }
 
 
+      function Adsterra_Link_Ad() {
+           window.location.href = "https://www.effectiveratecpm.com/iyj002xdgt?key=d5e6254a1def9a4eee4d1571083e33b7";
+        }
+
+function monetaDirect_Link_Ad() {
+           window.location.href = "https://otieu.com/4/9874372";
+        }
         // Initialize Moneta.gs ads
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize banner ads
@@ -20811,4 +20820,5 @@
     </script>
 </body>
 </html>
+
 
