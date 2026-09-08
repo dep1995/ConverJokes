@@ -281,6 +281,7 @@
 -->
     <script>
         function navigateToJokes(category) {
+            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!",category);
             // Show rewarded ad before navigation
             show_3039596().then(() => {
                 // User watched the ad, now navigate
@@ -289,7 +290,7 @@
                 // Ad failed or was skipped, navigate anyway
                 window.location.href = `jokes.html?category=${encodeURIComponent(category)}`;
             });
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!",category);
+            
         }
         
         // Initialize Moneta.gs ads
